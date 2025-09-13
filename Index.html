@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>College Counseling – Your Name</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="#home">YourCounseling</a>
+      <button id="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul id="menu" class="menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="cta">Book a Consult</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <h1>Guiding students to stand-out applications</h1>
+      <p>1:1 strategy, essay coaching, and application planning.</p>
+      <a class="btn" href="#contact">Book a Free 20-Minute Consult</a>
+    </section>
+
+    <section id="services" class="section">
+      <h2>Services</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Comprehensive Package</h3>
+          <ul>
+            <li>Application strategy + school list</li>
+            <li>Essay coaching & deadlines</li>
+            <li>Interview prep & final review</li>
+          </ul>
+          <p class="price">From $_____</p>
+        </article>
+        <article class="card">
+          <h3>Essay Coaching</h3>
+          <ul>
+            <li>Brainstorm to final polish</li>
+            <li>Voice, structure, authenticity</li>
+            <li>Supplement strategy</li>
+          </ul>
+          <p class="price">From $_____</p>
+        </article>
+        <article class="card">
+          <h3>Hourly Advising</h3>
+          <ul>
+            <li>Targeted help on any step</li>
+            <li>Scholarship apps & resumes</li>
+            <li>Parent Q&A</li>
+          </ul>
+          <p class="price">$_____/hr</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="results" class="section">
+      <h2>Results</h2>
+      <ul class="badges">
+        <li>Admits: ___, ___, ___</li>
+        <li>Scholarships: $___ total</li>
+        <li>Testimonials: “Short quote…” —Parent, Class of 2025</li>
+      </ul>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>Short bio (credentials, years advising, approach, any certifications).</p>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <form id="contact-form" method="post" action="/contact">
+        <label>Parent/Student Name <input name="name" required></label>
+        <label>Email <input type="email" name="email" required></label>
+        <label>Student Year <input name="year" placeholder="e.g., 11th grade"></label>
+        <label>Message <textarea name="message" rows="5" required></textarea></label>
+        <button type="submit">Send</button>
+      </form>
+      <p class="note">No spam. We’ll reply within 1–2 business days.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> YourCounseling • Privacy • Terms</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
