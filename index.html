@@ -1,95 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>YourCounseling</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <header>
-    <nav>
-      <a href="#">YourCounseling</a>
-      <ul>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="#">YourCounseling</a>
+      <button id="nav-toggle" aria-controls="menu" aria-expanded="false">Menu</button>
+      <ul id="menu" class="menu">
         <li><a href="#services">Services</a></li>
         <li><a href="#results">Results</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#contact">Book a Consult</a></li>
+        <li><a class="cta" href="#contact">Book a Consult</a></li>
       </ul>
-    </nav>
+    </div>
   </header>
 
-  <main>
-    <section id="hero">
+  <section class="hero">
+    <div class="container">
       <h1>Guiding students to stand-out applications</h1>
       <p>1:1 strategy, essay coaching, and application planning.</p>
       <a class="btn" href="#contact">Book a Free 20-Minute Consult</a>
-    </section>
+    </div>
+  </section>
 
-    <section id="services">
-      <h2>Services</h2>
-      <div class="service">
-        <h3>Comprehensive Package</h3>
-        <ul>
-          <li>Application strategy + school list</li>
-          <li>Essay coaching & deadlines</li>
-          <li>Interview prep & final review</li>
-        </ul>
-        <p>From $_____</p>
+  <main class="section">
+    <div class="container">
+      <h2 id="services">Services</h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Comprehensive Package</h3>
+          <ul>
+            <li>Application strategy + school list</li>
+            <li>Essay coaching &amp; deadlines</li>
+            <li>Interview prep &amp; final review</li>
+          </ul>
+          <p class="price">From $_____</p>
+        </article>
+
+        <article class="card">
+          <h3>Essay Coaching</h3>
+          <ul>
+            <li>Brainstorm to final polish</li>
+            <li>Voice, structure, authenticity</li>
+            <li>Supplement strategy</li>
+          </ul>
+          <p class="price">From $_____</p>
+        </article>
+
+        <article class="card">
+          <h3>Hourly Advising</h3>
+          <ul>
+            <li>Targeted help on any step</li>
+            <li>Scholarship apps &amp; resumes</li>
+            <li>Parent Q&amp;A</li>
+          </ul>
+          <p class="price">$_____/hr</p>
+        </article>
       </div>
 
-      <div class="service">
-        <h3>Essay Coaching</h3>
-        <ul>
-          <li>Brainstorm to final polish</li>
-          <li>Voice, structure, authenticity</li>
-          <li>Supplement strategy</li>
-        </ul>
-        <p>From $_____</p>
-      </div>
-
-      <div class="service">
-        <h3>Hourly Advising</h3>
-        <ul>
-          <li>Targeted help on any step</li>
-          <li>Scholarship apps & resumes</li>
-          <li>Parent Q&amp;A</li>
-        </ul>
-        <p>$_____/hr</p>
-      </div>
-    </section>
-
-    <section id="results">
-      <h2>Results</h2>
-      <ul>
+      <h2 id="results" style="margin-top:2.5rem;">Results</h2>
+      <ul class="badges">
         <li>Admits: ___, ___, ___</li>
         <li>Scholarships: $___ total</li>
         <li>Testimonials: “Short quote…” — Parent, Class of 2025</li>
       </ul>
-    </section>
 
-    <section id="about">
-      <h2>About</h2>
+      <h2 id="about" style="margin-top:2.5rem;">About</h2>
       <p>Short bio (credentials, years advising, approach, any certifications).</p>
-    </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <form action="/contact" method="post">
-        <label>Parent/Student Name <input type="text" name="name"></label>
-        <label>Email <input type="email" name="email"></label>
-        <label>Student Year <input type="text" name="year"></label>
-        <label>Message <textarea name="message"></textarea></label>
-        <button type="submit">Send</button>
+      <h2 id="contact" style="margin-top:2.5rem;">Contact</h2>
+      <form id="contact-form" action="/contact" method="post">
+        <label>Parent/Student Name
+          <input type="text" name="name" required>
+        </label>
+        <label>Email
+          <input type="email" name="email" required>
+        </label>
+        <label>Student Year
+          <input type="text" name="year">
+        </label>
+        <label>Message
+          <textarea name="message" rows="5"></textarea>
+        </label>
+        <button class="btn" type="submit">Send</button>
+        <p class="note">No spam. We’ll reply within 1–2 business days.</p>
       </form>
-      <p>No spam. We’ll reply within 1–2 business days.</p>
-    </section>
+    </div>
   </main>
 
-  <footer>
-    <p>© YourCounseling • Privacy • Terms</p>
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> YourCounseling • Privacy • Terms</small>
+    </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
